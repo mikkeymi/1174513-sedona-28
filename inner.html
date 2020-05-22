@@ -15,10 +15,10 @@
 		    		<a href="index.html"><img src="img/main_logo.png" width="138" height="70" alt="City of Sedona"></a>
 		    	</div>
 		    	<ul>
-		    		<li><a href="#" area-label='Информация'>информация<a/></li>
-		    		<li><a href="#" area-label='Фото и видео'> фото и видео</a> </li>
-		    		<li><a href="#" area-label="Карта штата"> карта штата</a></li>
-		    		<li><a href="inner.html" area-label="Гостиницы"> гостиницы</a></li>
+		    		<li><a href="#">информация<a/></li>
+		    		<li><a href="#"> фото и видео</a> </li>
+		    		<li><a href="#"> карта штата</a></li>
+		    		<li><a href="inner.html"> гостиницы</a></li>
 		    	</ul>
     		</nav>
     	 
@@ -67,31 +67,26 @@
 
 		<fieldset class="price">
 			<legend>стоимость в сутки (P):</legend>
-			<tr>
-				<td>от 0</td>
-				<td>до 3000</td>
-			</tr>
-			<input type="range" multiple min="0" name="range" min="1" max="3000" step="500" value="0">
-		<button type="sumbit" area-label='Показать результаты'>показать</button>
+				<input type="text" name="range" value="от 0">
+				<input type="text" name="range" value="до 3000">
+			 <!-- тут будет искусственный ползунок -->
+		<button type="sumbit">Показать</button>
 		</fieldset>
 	</form>
 
 	<section class="result">
-		<p>найдено:3</p>
-		<fieldset class="sort"> 
-			<legend>сортировка</legend>
-			<input  id="price" type="radio" name="radio" checked>
-				<label for="price">по цене</label>
-			<input  id="type" type="radio" name="radio">
-				<label for="type">по типу</label>
-			<input id="rating" type="radio" name="radio">
-				<label for="rating">по рейтингу</label>
-				<!--стрелочки -->
-		</fieldset>
+		<p>Найдено: 3</p>
+		 	<p>Сортировка</p>
+		 	<a href="#">По цене</a>
+		 	<a href="#">По типу</a>
+		 	<a href="#">По рейтингу</a>
+		 	 <a href="#">Sort ascending</a>
+		 	 <a href="#">Sort descending</a>
 	</section>
 
 
 	<section class="hotels_variant">
+		<h1 class="visually-hidden">Актуальные гостиницы в Седоне на выбранные даты</h1>
 			<ul>
 				<li class="variant_item">
 					<img src="img/hotels_1.jpg" width="135" height="90" alt="Фото гостинцы">
@@ -141,16 +136,16 @@
 		<footer class="footer">
 			
 			<section class="footer_info">
-				<h3 class="visually-hidden">Связаться с нами</h3>
+				<h1 class="visually-hidden">Связаться с нами</h1>
 				<p>#visitedona</p>
 				<p>тел: +7(495)666-01-66</p>
 			</section>
 
 			 <section class="social_icons">
-			 	<h3 class="visually-hidden">Мы в социальных сетях</h3>
-            		<a class="inst" href="" area-label='Инстаграм'> Instagram</a>
-            		<a class="fb" href="" area-label='Фэйсбук'>Facebook</a>
-           		    <a class="tw" href="" area-label='Ютуб'>YouTube</a>
+			 	<h1 class="visually-hidden">Мы в социальных сетях</h1>
+            		<a class="inst" href=""> Instagram</a>
+            		<a class="fb" href="">Facebook</a>
+           		    <a class="tw" href="">YouTube</a>
        		 </section>
 
        		 <section class="signature_logo">
