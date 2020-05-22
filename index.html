@@ -16,58 +16,134 @@
 		    		<a><img src="img/main_logo.png" width="138" height="70" alt="City of Sedona"></a>
 		    	</div>
 		    	<ul>
-		    		<li><a href="#">информация<a/></li>
-		    		<li><a href="#"> фото и видео</a> </li>
-		    		<li><a href="#"> карта штата</a></li>
-		    		<li><a href="inner.html"> гостиницы</a></li>
+		    		<li><a href="#" area-label='Информация'>информация<a/></li>
+		    		<li><a href="#" area-label='Фото и видео'> фото и видео</a> </li>
+		    		<li><a href="#" area-label="Карта штата"> карта штата</a></li>
+		    		<li><a href="inner.html" area-label="Гостиницы"> гостиницы</a></li>
 		    	</ul>
     	</nav>
     	 	
 				<div class="title">
 					<img class="intro" src="img/intro-welcome.svg"  width="1200" height="400" alt="Welcome to the gergeous, Sedona. Because the Grand Canyon sucks">
 				</div>
-    	
 
     	</header>
     
  	<main>
-    	<section class="reasons">
+    	<section class="title_reasons">
     			
     				<p>Седона — небольшой городок в Аризоне, <br>заслуживающий большего!</p>
     				<p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
     			
     	</section>
 
+    	<section class="reasons">
+				<div class="reasons_item">
+					<h3>настоящий городок</h3>
+						<p>— №1 —</p>
+						<p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+				</div>
+
+				<div class="reasons_item">
+					<img src="img/grid_item1.png" alt="Фото кафе в Седоне">
+				</div>
+
+				<div class="reasons_item white_itmem">
+					<h2>Жилье</h2>
+					<p>Рекомендуем пожить в настоящем мотеле, всё как в кино! </p>
+				</div>
+
+				<div class="reasons_item white_itmem">
+					<h2>Еда</h2>
+					<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь! </p>
+				</div>
+
+				<div class="reasons_item white_itmem">
+					<h2>Сувениры</h2>
+					<p>Сувениры Не только китайского, но и местного производства! </p>
+				</div>
+
+				<div class="reasons_item">
+					<img src="img/grid_item2.png">
+				</div>
+
+				<div class="reasons_item">
+					<h3>там есть мост дьявола</h3>
+						<p>— №2 —</p>
+						<p>Да, по нему можно пройти! Если конечно вы осмелитесь </p>
+				</div>
+
+				<div class="reasons_item gray_item">
+					<h3>небольшая площадь</h3>
+						<p>— №3 —</p>
+						<p>все достопримечательности находятся очень близко</p>
+				</div>
+
+				<div class="reasons_item gray_item">
+					<h3>красивая дорога</h3>
+						<p>— №4 —</p>
+						<p>ехать в седону из лас-вегаса совсем не скучно!</p>
+				</div>
+
+				<div class="reasons_item gray_item">
+					<h3>мало туристов</h3>
+						<p>— №5 —</p>
+						<p>большинство едет в гранд-каньон и толпится там</p>
+				</div>
+    		
+    	</section>
+
 		<section class="hotels">
 			<div class="hotels_description">
-				<h2>Забронировать гостиницу в Седоне</h2>
+				<h2 class="visually-hidden">Забронировать гостиницу в Седоне</h2>
 				<p>заинтересовались?</p>
 				<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие преложения гостинец в седоне</p>
 			</div>
 				<p class="search_hotels">
 				поиск гостиницы в седоне
 				</p>
-				<!--  здесь будет форма для поиска гостиницы -->
-				<button type="submit" class="button_search">найти</button>
+
+				<form action="https://echo.htmlacademy.ru/" method="get">
+  					<p> 
+  						<label for="arrival_date">дата заезда:</label>
+  						<input type="text" id="arrival_date" value="24 апреля 2017"> 
+  					</p>
+  							<!-- +иконки календаря фоном? -->
+ 					<p> <label for="date_departure">дата выезда:</label>
+ 						<input type="text" id="date_departure" value="4 июня 2017">
+ 					</p>
+  					<p> <label for="adults">взрослые:</label>
+  					 	<input type="number" id="adults" value="2" min="1" max="10">
+  					 </p>
+  					<p>
+						<label for="children">дети:</label>
+  					     <input type="number" id="children" value="0" min="0" max="10">
+ 					<button type="submit" class="button_search">найти</button>
+ 				</form>
 		</section>
 
 	</main>
+
+		<section class="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26190.666525913188!2d-111.78157946351443!3d34.860415364196854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sge!4v1589366185111!5m2!1sru!2sge" width="100%" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			
+		</section>
 
 
 
 		<footer class="footer">
 			
 			<section class="footer_info">
-				<h3>Связаться с нами</h3>
+				<h3 class="visually-hidden">Связаться с нами</h3>
 				<p>#visitedona</p>
 				<p>тел: +7(495)666-01-66</p>
 			</section>
 
 			 <section class="social_icons">
-			 	<h3>Мы в социальных сетях</h3>
-            		<a class="inst" href=""> Instagram</a>
-            		<a class="fb" href="">Facebook</a>
-           		    <a class="tw" href="">YouTube</a>
+			 	<h3 class="visually-hidden">Мы в социальных сетях</h3>
+            		<a class="inst" href="" area-label='Инстаграм'> Instagram</a>
+            		<a class="fb" href="" area-label='Фэйсбук'>Facebook</a>
+           		    <a class="tw" href="" area-label='Ютуб'>YouTube</a>
        		 </section>
 
        		 <section class="signature_logo">

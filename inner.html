@@ -15,10 +15,10 @@
 		    		<a href="index.html"><img src="img/main_logo.png" width="138" height="70" alt="City of Sedona"></a>
 		    	</div>
 		    	<ul>
-		    		<li><a href="#">информация<a/></li>
-		    		<li><a href="#"> фото и видео</a> </li>
-		    		<li><a href="#"> карта штата</a></li>
-		    		<li><a href="inner.html"> гостиницы</a></li>
+		    		<li><a href="#" area-label='Информация'>информация<a/></li>
+		    		<li><a href="#" area-label='Фото и видео'> фото и видео</a> </li>
+		    		<li><a href="#" area-label="Карта штата"> карта штата</a></li>
+		    		<li><a href="inner.html" area-label="Гостиницы"> гостиницы</a></li>
 		    	</ul>
     		</nav>
     	 
@@ -26,8 +26,72 @@
     	</header>
 
 <main>
+
+	<form class="filters" action="https://echo.htmlacademy.ru/" method="get">
+		 <fieldset class="infrastructure">
+		 	<legend>инфраструктура:</legend>
+		 	<ul>
+		 		<li>
+		 			 <input type="checkbox" id="filter_swimm" name="infrastructure" checked>
+		 			<label for="filter_swimm">бассейн</label>
+		 		</li>
+		 		<li>
+		 			 <input type="checkbox" id="parking" name="infrastructure">
+		 				<label for="parking">парковка</label>
+		 		</li>
+		 		<li>
+		 			<input type="checkbox" id="wi_fi" name="infrastructure">
+		 			<label for="wi_fi">wi-fi</label>
+		 		</li>
+		 	</ul>
+		</fieldset>
+
+
+		<fieldset class="type">
+			<legend>тип жилья:</legend>
+			<ul>
+				<li>
+					 <input type="checkbox" id="filter_hotels" name="type" checked>
+					 <label for="filter_hotels">гостиница</label>
+				</li>
+		 		<li>
+		 			 <input type="checkbox" id="filter_motel" name="type" checked>
+		 			 <label for="filter_motel">мотель</label>
+		 		</li>
+		 		<li>
+		 			 <input type="checkbox" id="appart" name="type" checked>
+		 			 <label for="appart">аппартаменты</label>
+		 		</li>
+		 	</ul>
+		</fieldset>
+
+		<fieldset class="price">
+			<legend>стоимость в сутки (P):</legend>
+			<tr>
+				<td>от 0</td>
+				<td>до 3000</td>
+			</tr>
+			<input type="range" multiple min="0" name="range" min="1" max="3000" step="500" value="0">
+		<button type="sumbit" area-label='Показать результаты'>показать</button>
+		</fieldset>
+	</form>
+
+	<section class="result">
+		<p>найдено:3</p>
+		<fieldset class="sort"> 
+			<legend>сортировка</legend>
+			<input  id="price" type="radio" name="radio" checked>
+				<label for="price">по цене</label>
+			<input  id="type" type="radio" name="radio">
+				<label for="type">по типу</label>
+			<input id="rating" type="radio" name="radio">
+				<label for="rating">по рейтингу</label>
+				<!--стрелочки -->
+		</fieldset>
+	</section>
+
+
 	<section class="hotels_variant">
-		
 			<ul>
 				<li class="variant_item">
 					<img src="img/hotels_1.jpg" width="135" height="90" alt="Фото гостинцы">
@@ -77,16 +141,16 @@
 		<footer class="footer">
 			
 			<section class="footer_info">
-				<h3>Связаться с нами</h3>
+				<h3 class="visually-hidden">Связаться с нами</h3>
 				<p>#visitedona</p>
 				<p>тел: +7(495)666-01-66</p>
 			</section>
 
 			 <section class="social_icons">
-			 	<h3>Мы в социальных сетях</h3>
-            		<a class="inst" href="">Instagram</a>
-            		<a class="fb" href="">Facebook</a>
-           		    <a class="tw" href="">YouTube</a>
+			 	<h3 class="visually-hidden">Мы в социальных сетях</h3>
+            		<a class="inst" href="" area-label='Инстаграм'> Instagram</a>
+            		<a class="fb" href="" area-label='Фэйсбук'>Facebook</a>
+           		    <a class="tw" href="" area-label='Ютуб'>YouTube</a>
        		 </section>
 
        		 <section class="signature_logo">

@@ -1,4 +1,4 @@
-*{
+/**{*/
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -21,6 +21,16 @@ li{
 body{
 	font-family: 'PT Sans', sans-serif;
 	/*text-align: center;*/
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .title{
 	height: 509px;
