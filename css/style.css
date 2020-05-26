@@ -1,26 +1,39 @@
-/**{*/
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
 
-h1,h2,h3,h4,h5{
-	font-weight: normal;
+:root{
+	--black-color: #000000;
+	--white-color: #FFFFFF;
+	--accent-color: #81B3D2;
+	--dark-accent:#669EC0;
+	--darker-accent:#5496BD;
+	--basic-brown: #766357;
+	--dark-brown:#604E43;
+	--darken-brown:#503E33;
+	--brown2:#666666;
+ 	--ligth-dark: #333333;
+ 	--gray-color: #EEEEEE;
+  	--ligth-gray: #F2F2F2;
+}
+a{
+	text-decoration: none;
 }
 a:hover{
 	cursor: pointer;
 }
-a:visited{
-	color: inherit;
+img{
+	max-width: 100%;
+	height: auto;
 }
-li{
-	/*list-style: none;*/
-}
-
 
 body{
-	font-family: 'PT Sans', sans-serif;
-	/*text-align: center;*/
+	font-family:'PT Sans', sans-serif;
+	min-width: 1200px;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--black-color);
 }
 .visually-hidden {
   position: absolute;
@@ -32,10 +45,169 @@ body{
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.nav li{
+	list-style: none;
+	color: var(--black-color);
+}
+.nav a{
+	color: var(--black-color);
+}
+.nav a:hover{
+	color: var(--accent-color);
+}
+.nav a:active{
+	opacity: 0.3;
+}
 .title{
-	height: 509px;
 	background-image: url(../img/main_background.jpeg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+.reasons{
+	text-align: center;
+}
+.reasons_item1{
+	font-size: 21px;
+}
+.reasons_item2{
+	font-weight: normal;
+	line-height: 26px;
+	font-size: 14px;
+	color: var(--ligth-dark);
+}
+.gray_item{
+	background-color: var(--gray-color);
+}
+.hotels_description{
+	text-align: center;
+}
+.hotels_description p:nth-child(2n){
+	font-size: 30px;
+	line-height: 24px;
+}
+.hotels_description p:nth-child(3n){
+	font-weight: normal;
+}
+.search_hotels{
+	font-size: 21px;
+	line-height: 26px;
+	text-align: center;
+	align-items: center;
+	color: var(--white-color);
+	padding: 30px 124px 30px 125px;
+	background-color: var(--basic-brown);
+	display: inline-block;
+}
+.search_hotels:hover{
+	background-color: var(--dark-brown);
+}
+.search_hotels:active{
+	color: rgba(255,255,255, 0.3);
+	background-color: var(--darken-brown);
+}
+.footer_info{
+	font-size: 21px;
+	line-height: 26px;
+}
+ 
+	/*дальше с иконками и лого не знаю что делать:с*/
+
+.social_icons .inst{
+}
+.social_icons .fb{	
+}
+.social_icons .tw{
+}
+.social_icons a:hover{
+}
+.sochial_icons a:actie{
+}
+
+.signature_logo a{
+	color: var(--black-color);
+	text-align: center;
+	line-height: 26px;
+	font-weight: normal;
+}
+.logo_footer{
+}
+.logo_footer:hover{
+}
+.logo_footer:active{
+}
+
+
+/*2 страница*/
+.nav .active{
+	color: var(--basic-brown);
+}
+.variant_list li{
+	list-style: none;
+}
+.hotels_name{
+	font-size: 21px;
+	line-height: 26px;
+	align-items: center;
+}
+.hotels_name:hover{
+    color: var(--accent-color);
+}
+.hotels_name:active{
+	color: rgba(0,0,0, 0.3);
+}
+.hotels_type,
+.variant_price{
+	font-size: 14px;
+	font-weight: normal;
+	align-items: center;
+}
+.detailed_btn{
+	padding: 3px 16px 3px 17px;
+	font-style: normal;
+	font-size: 14px;
+	line-height: 21px;
+	align-items: center;
+	color: white;
+	background-color: var(--accent-color);
+}
+.detailed_btn:hover{
+ 	background-color: var(--dark-accent);
+}
+.detailed_btn:active{
+	background-color: var(--darker-accent);
+	color: rgba(255,255,255, 0.3);
+}
+.book_btn{
+	text-transform: uppercase;
+	font-family: inherit;
+	border: none;
+	font-weight: bold;
+	padding: 3px 16px 3px 17px;
+	font-style: normal;
+	font-size: 14px;
+	line-height: 21px;
+	align-items: center;
+	color: white;
+	background-color: var(--basic-brown);
+
+	/*свойства у кнопок одинаковые, но выглядят по разному:с*/
+}
+.book_btn:hover{
+	background-color: var(--dark-brown);
+}
+.book_btn:active{
+	background-color: var(--darken-brown);
+	color: rgba(255,255,255, 0.3);
+}
+.rating{
+	line-height: 21px;
+	font-weight: normal;
+	text-align: center;
+	display: inline-block;
+	color: var(--brown2);
+	background-color: var(--ligth-gray);
+	padding: 3px 15px 3px 12px;
+}
+

@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   </head>
@@ -18,7 +19,7 @@
 		    		<li><a href="#">информация<a/></li>
 		    		<li><a href="#"> фото и видео</a> </li>
 		    		<li><a href="#"> карта штата</a></li>
-		    		<li><a href="inner.html"> гостиницы</a></li>
+		    		<li><a class="active" href="inner.html"> гостиницы</a></li>
 		    	</ul>
     		</nav>
     	 
@@ -67,16 +68,19 @@
 
 		<fieldset class="price">
 			<legend>стоимость в сутки (P):</legend>
-				<input type="text" name="range_min" value="от 0">
-				<input type="text" name="range_max" value="до 3000">
+				<input aria-hidden="true" id="range_min" type="text" name="range_min" value="от 0">
+					<label for="range_min">цена от 0</label>
+				<input aria-hidden="true" id="range_max" type="text" name="range_max" value="до 3000">
+					<label for="range_max">цена до 3000</label>
+
 
 			 <!-- тут пытается появиться искусственный ползунок -->
 			 <div class="slider">
-			 	<button type="button">
-			 		<input type="text" name="slider_btn1">
+			 	<button aria-hidden="true" type="button">
+			 		<input aria-hidden="true" type="text" name="slider_btn1">
 			 	</button>
-			 	<button type="button">
-			 		<input type="text" name="slider_btn2">
+			 	<button aria-hidden="true" type="button">
+			 		<input  aria-hidden="true" type="text" name="slider_btn2">
 			 	</button>
 			 </div>
 
@@ -99,18 +103,18 @@
 
 	<section class="hotels_variant">
 		<h2 class="visually-hidden">Актуальные гостиницы в Седоне на выбранные даты</h2>
-			<ul>
+			<ul class="variant_list">
 				<li class="variant_item">
 					<img src="img/hotels_1.jpg" width="135" height="90" alt="Фото гостинцы">
 					<h2 class="hotels_name">Amara resort & spa</h2>
 					<p class="hotels_type">Гостница</p>
 					<span class="variant_price">от 4000 р.</span>
-					<a href="#">Подробнее</a>
-					<button type="button">Забронировать</button>
+					<a href="#" class="detailed_btn">Подробнее</a>
+					<button type="button" class="book_btn">Забронировать</button>
 						<div class="stars">
 							<p>звезды</p>
 						</div>
-						<p class="rating">рейтинг: 8.5</p>
+						<p class="rating">рейтинг: 8,5</p>
 				</li>
 
 				<li class="variant_item">
@@ -118,12 +122,12 @@
 					<h2 class="hotels_name">desert quail inn</h2>
 					<p class="hotels_type">Мотель</p>
 					<span class="variant_price">от 3000 р.</span>
-					<a href="#">Подробнее</a>
-					<button type="button">Забронировать</button>
+					<a href="#" class="detailed_btn">Подробнее</a>
+					<button type="button" class="book_btn">Забронировать</button>
 						<div class="stars">
 							<p>звезды</p>
 						</div>
-						<p class="rating">рейтинг: 8.9</p>
+						<p class="rating">рейтинг: 8,9</p>
 				</li>
 
 				<li class="variant_item">
@@ -131,12 +135,12 @@
 					<h2 class="hotels_name">villas at poco diablo</h2>
 					<p class="hotels_type">Аппартаменты</p>
 					<span class="variant_price">от 2000 р.</span>
-					<a href="#">Подробнее</a>
-					<button type="button">Забронировать</button>
+					<a href="#" class="detailed_btn">Подробнее</a>
+					<button type="button" class="book_btn">Забронировать</button>
 						<div class="stars">
 							<p>звезды</p>
 						</div>
-						<p class="rating">рейтинг: 9.2</p>	
+						<p class="rating">рейтинг: 9,2</p>	
 				</li>	
 			</ul>			
 	</section>
@@ -155,19 +159,17 @@
 
 			 <section class="social_icons">
 			 	<h3 class="visually-hidden">Мы в социальных сетях</h3>
-            		<a class="inst" href=""> Instagram</a>
-            		<a class="fb" href="">Facebook</a>
-           		    <a class="tw" href="">YouTube</a>
+            		<a class="inst" href=""> Твиттер</a>
+            		<a class="fb" href="">Фэйсбук</a>
+           		    <a class="tw" href="">Ютуб</a>
        		 </section>
 
        		 <section class="signature_logo">
-       		 	<a href="https://htmlacademy.ru/intensive/htmlcss">
+       		 	<a class="logo_footer" href="https://htmlacademy.ru/intensive/htmlcss">
        		 		website by
-       		 		<img src="img/logo_htmlacademy.png" alt="Логотип htmlacademy">
+       		 		<img src="img/logo-htmlacademy.svg" alt="Логотип htmlacademy">
        		 	</a>
        		 </section>
-
-
 
 		</footer>
 	
