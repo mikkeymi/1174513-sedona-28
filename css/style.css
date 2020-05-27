@@ -16,22 +16,20 @@
 a{
 	text-decoration: none;
 }
-a:hover{
-	cursor: pointer;
-}
+
 img{
 	max-width: 100%;
 	height: auto;
 }
 
-body{
-	font-family:'PT Sans', sans-serif;
+body{ 
+	font-family:'PT Sans', sans-serif, 'PT Sans Narrow', sans-serif;
 	min-width: 1200px;
 	margin: 0;
 	padding: 0;
 	font-size: 14px;
 	line-height: 21px;
-	font-weight: bold;
+	font-weight: 400;
 	text-transform: uppercase;
 	color: var(--black-color);
 }
@@ -48,6 +46,7 @@ body{
 
 .nav li{
 	list-style: none;
+	font-weight: 700;
 	color: var(--black-color);
 }
 .nav a{
@@ -68,10 +67,11 @@ body{
 .reasons{
 	text-align: center;
 }
-.reasons_item1{
+.reasons_title{
+	font-weight: 700;
 	font-size: 21px;
 }
-.reasons_item2{
+.reasons_text{
 	font-weight: normal;
 	line-height: 26px;
 	font-size: 14px;
@@ -82,6 +82,7 @@ body{
 }
 .hotels_description{
 	text-align: center;
+	font-weight: 700;
 }
 .hotels_description p:nth-child(2n){
 	font-size: 30px;
@@ -92,6 +93,7 @@ body{
 }
 .search_hotels{
 	font-size: 21px;
+	font-weight: 700;
 	line-height: 26px;
 	text-align: center;
 	align-items: center;
@@ -110,9 +112,9 @@ body{
 .footer_info{
 	font-size: 21px;
 	line-height: 26px;
+	font-weight: 700;
 }
- 
-	/*дальше с иконками и лого не знаю что делать:с*/
+
 
 .social_icons .inst{
 }
@@ -153,6 +155,7 @@ body{
 }
 .hotels_name:hover{
     color: var(--accent-color);
+    font-weight: 700;
 }
 .hotels_name:active{
 	color: rgba(0,0,0, 0.3);
@@ -164,12 +167,14 @@ body{
 	align-items: center;
 }
 .detailed_btn{
+	display: inline-block;
+	font-weight: 700;
 	padding: 3px 16px 3px 17px;
 	font-style: normal;
 	font-size: 14px;
 	line-height: 21px;
 	align-items: center;
-	color: white;
+	color: var(--white-color);
 	background-color: var(--accent-color);
 }
 .detailed_btn:hover{
@@ -180,19 +185,18 @@ body{
 	color: rgba(255,255,255, 0.3);
 }
 .book_btn{
+	display: inline-block;
 	text-transform: uppercase;
 	font-family: inherit;
 	border: none;
-	font-weight: bold;
+	font-weight: 700;
 	padding: 3px 16px 3px 17px;
 	font-style: normal;
 	font-size: 14px;
 	line-height: 21px;
 	align-items: center;
-	color: white;
+	color: var(--white-color);
 	background-color: var(--basic-brown);
-
-	/*свойства у кнопок одинаковые, но выглядят по разному:с*/
 }
 .book_btn:hover{
 	background-color: var(--dark-brown);
