@@ -31,7 +31,7 @@
 	<form class="filters" action="https://echo.htmlacademy.ru/" method="get">
 		 <fieldset class="infrastructure">
 		 	<legend>инфраструктура:</legend>
-		 	<ul>
+		 	<ul class="checkbox_filters">
 		 		<li>
 		 			 <input type="checkbox" id="filter_swimm" name="infrastructure" checked>
 		 			<label for="filter_swimm">бассейн</label>
@@ -50,7 +50,7 @@
 
 		<fieldset class="type">
 			<legend>тип жилья:</legend>
-			<ul>
+			<ul class="checkbox_filters">
 				<li>
 					 <input type="checkbox" id="filter_hotels" name="type" checked>
 					 <label for="filter_hotels">гостиница</label>
@@ -82,20 +82,22 @@
 			 	</button>
 			 </div>
 
-		<button type="sumbit">Показать</button>
+		<button class="show_results_btn" type="sumbit">Показать</button>
 		</fieldset>
 	</form>
 
 	<section class="result">
 		<p>Найдено: 3</p>
 		 	<p>Сортировка</p>
-		 	<ul>
-		 		<li><a href="#">По цене</a></li>
+		 	<ul class="filter_sort">
+		 		<li><a class="selected" href="#">По цене</a></li>
 		 		<li><a href="#">По типу</a></li>
 		 		<li><a href="#">По рейтингу</a></li>
 		 	</ul>
-		 	 <a href="#">Сортировать по возрастанию</a>
-		 	 <a href="#">Сортировать по убыванию</a>
+		 	<div class="visually-hidden">
+		 	 	<a href="#">Сортировать по возрастанию</a>
+		 		<a href="#">Сортировать по убыванию</a>
+		 	</div>
 	</section>
 
 
