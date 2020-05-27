@@ -72,7 +72,7 @@ body{
 	font-size: 21px;
 }
 .reasons_text{
-	font-weight: normal;
+	font-weight: 400;
 	line-height: 26px;
 	font-size: 14px;
 	color: var(--ligth-dark);
@@ -131,7 +131,7 @@ body{
 	color: var(--black-color);
 	text-align: center;
 	line-height: 26px;
-	font-weight: normal;
+	font-weight: 400;
 }
 .logo_footer{
 }
