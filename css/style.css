@@ -1,4 +1,12 @@
-
+.page{
+	height: 100%;
+}
+.page-body{
+	min-height: 100%;
+  	display: grid;
+  	grid-template-rows: min-content 1fr min-content;
+  	align-content: start;
+}
 :root{
 	--black-color: #000000;
 	--white-color: #FFFFFF;
@@ -13,6 +21,7 @@
  	--gray-color: #EEEEEE;
   	--ligth-gray: #F2F2F2;
   	--ligth-white: #EBEBEB;
+  	--hr-color:#E5E5E5;
 }
 a{
 	text-decoration: none;
@@ -44,11 +53,20 @@ body{
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
+.nav{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	margin: 0 auto;
+}
+.nav ul{
+	display: flex;
+}
 .nav li{
 	list-style: none;
 	font-weight: 700;
 	color: var(--black-color);
+	margin-left: 10px;
 }
 .nav a{
 	color: var(--black-color);
@@ -71,12 +89,16 @@ body{
 .reasons_title{
 	font-weight: 700;
 	font-size: 21px;
+	margin: 0;
+	margin-top: 42px;
+	margin-bottom: 16px;
 }
 .reasons_text{
 	font-weight: 400;
 	line-height: 26px;
 	font-size: 14px;
 	color: var(--ligth-dark);
+	margin-bottom: 51px;
 }
 .gray_item{
 	background-color: var(--gray-color);
@@ -88,9 +110,14 @@ body{
 .hotels_description p:nth-child(2n){
 	font-size: 30px;
 	line-height: 24px;
+	margin: 0;
+	margin-top: 58px;
 }
 .hotels_description p:nth-child(3n){
 	font-weight: normal;
+	padding: 0;
+	padding-top: 30px;
+	padding-bottom:10px; 
 }
 .search_hotels{
 	font-size: 21px;
@@ -173,6 +200,15 @@ body{
 }
 .logo_footer:active{
 }
+ /*тут нужно измерять ширину контентной части? 
+ кажется я не могу правильно ее измерить*/
+.footer{
+	width: 974px;
+	display: flex;
+	justify-content: space-around;
+	margin: 0 auto;
+}
+
 
 
 /*2 страница*/
@@ -244,14 +280,29 @@ legend{
 	opacity: 1;
 }
 
-
-/*.selected{*/
-	/*color: var(--accent-color);*/
-/*}*/
-
 .variant_list li{
 	list-style: none;
 }
+.variant_item{
+	box-sizing: border-box;
+	width: 1100px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 4fr 1fr;
+	grid-gap: 29px;
+	margin-top: 40px;
+	padding-bottom: 30px;
+}
+.item_wrapper h2{
+	margin: 0;
+	padding: 0;
+}
+.item_wrapper p{
+	display: inline-block;
+}
+ /*как добиться правильных переносов текста и кнопок, 
+ наверно добавление дивов не самый правильный вариант(*/
+
 .hotels_name{
 	font-size: 21px;
 	line-height: 26px;
@@ -318,4 +369,5 @@ legend{
 	background-color: var(--ligth-gray);
 	padding: 3px 15px 3px 12px;
 }
+
 
