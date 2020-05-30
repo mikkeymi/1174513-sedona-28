@@ -1,12 +1,4 @@
-.page{
-	height: 100%;
-}
-.page-body{
-	min-height: 100%;
-  	display: grid;
-  	grid-template-rows: min-content 1fr min-content;
-  	align-content: start;
-}
+
 :root{
 	--black-color: #000000;
 	--white-color: #FFFFFF;
@@ -23,6 +15,16 @@
   	--ligth-white: #EBEBEB;
   	--hr-color:#E5E5E5;
 }
+.page{
+	height: 100%;
+}
+.page-body{
+	min-height: 100%;
+  	display: grid;
+  	grid-template-rows: min-content 1fr min-content;
+  	align-content: start;
+}
+/*про это говорили на лекции, что бы хедер и футер прилипали*/
 a{
 	text-decoration: none;
 }
@@ -34,9 +36,11 @@ img{
 
 body{ 
 	font-family:'PT Sans', Verdana, sans-serif;
-	min-width: 1200px;
-	margin: 0;
-	padding: 0;
+	width: 1200px;
+	margin: 0 auto;
+	margin-left: 38px;
+	background-color: var(--ligth-gray);
+	margin-right: 38px;
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: 400;
@@ -52,6 +56,9 @@ body{
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+.container{
+	background-color: var(--white-color);
 }
 .nav{
 	width: 100%;
@@ -176,7 +183,6 @@ body{
 	font-weight: 700;
 }
 
-
 .social_icons .inst{
 }
 .social_icons .fb{	
@@ -200,10 +206,8 @@ body{
 }
 .logo_footer:active{
 }
- /*тут нужно измерять ширину контентной части? 
- кажется я не могу правильно ее измерить*/
+ 
 .footer{
-	width: 974px;
 	display: flex;
 	justify-content: space-around;
 	margin: 0 auto;
@@ -282,10 +286,8 @@ legend{
 
 .variant_list li{
 	list-style: none;
-}
-.variant_item{
 	box-sizing: border-box;
-	width: 1100px;
+	width: 1049px;
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 1fr 4fr 1fr;
@@ -300,9 +302,6 @@ legend{
 .item_wrapper p{
 	display: inline-block;
 }
- /*как добиться правильных переносов текста и кнопок, 
- наверно добавление дивов не самый правильный вариант(*/
-
 .hotels_name{
 	font-size: 21px;
 	line-height: 26px;
@@ -369,5 +368,4 @@ legend{
 	background-color: var(--ligth-gray);
 	padding: 3px 15px 3px 12px;
 }
-
 
