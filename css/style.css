@@ -18,13 +18,15 @@
 .page{
 	height: 100%;
 }
-.page-body{
+/*.page-body{
 	min-height: 100%;
   	display: grid;
   	grid-template-rows: min-content 1fr min-content;
   	align-content: start;
-}
-/*про это говорили на лекции, что бы хедер и футер прилипали*/
+}*/
+/*оставлю закомментированным,
+ они сказали потом покажут для чего это нужно было,
+ на страницу сейчас никак не влияет*/
 a{
 	text-decoration: none;
 }
@@ -36,8 +38,6 @@ img{
 
 body{ 
 	font-family:'PT Sans', Verdana, sans-serif;
-	width: 1200px;
-	margin: 0 auto;
 	margin-left: 38px;
 	background-color: var(--ligth-gray);
 	margin-right: 38px;
@@ -59,11 +59,12 @@ body{
 }
 .container{
 	background-color: var(--white-color);
+	width: 1200px;
 }
 .nav{
 	width: 100%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	margin: 0 auto;
 }
 .nav ul{
@@ -107,6 +108,50 @@ body{
 	color: var(--ligth-dark);
 	margin-bottom: 51px;
 }
+
+.reasons_grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.item h3,h4{
+	font-size: 21px;
+}
+.reasons_item{
+	grid-column:1/2;
+	background-color: var(--accent-color);
+	color: var(--white-color);
+	padding-left: 50px;
+	padding-right: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+/*если это выравнивание элементов внутри правильно, 
+сделаю к остальным блокам так же*/
+
+.reasons_item_2{
+	grid-column:2/4;
+}
+.reasons_item_3{
+	grid-column:1/2;
+}
+.reasons_item_6{
+	grid-column: 1/3;
+}
+.reasons_item_7{
+	background-color: var(--accent-color);
+	color: var(--white-color);
+}
+.reasons_item_8{
+	grid-column: 1/2;
+	margin: 0;
+	padding: 0;
+
+}
+.reasons_item_9{
+	grid-column:2/3;
+}
 .gray_item{
 	background-color: var(--gray-color);
 }
@@ -143,6 +188,14 @@ body{
 .search_hotels:active{
 	color: rgba(255,255,255, 0.3);
 	background-color: var(--darken-brown);
+}
+/*я просто хочу выровнять содержимое формы по центру,
+ у меня не получается*/
+ 
+.form_search{
+	box-sizing: border-box;
+	width: 568px;
+	margin: 0 auto;
 }
 .form_search label,
 .form_search input{
@@ -211,6 +264,7 @@ body{
 	display: flex;
 	justify-content: space-around;
 	margin: 0 auto;
+	align-items: center;
 }
 
 
@@ -221,8 +275,16 @@ body{
 }
 .filters{
 	background-image: url(../img/backgrounds.png);
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 1200px 217px;
+	display: flex;
+}
+
+/* наверно двигать блок маргином нельзя, но не знаю как это
+ можно сделать флексом*/
+
+.price{
+	margin-left: 350px;
+
 }
 fieldset{
 	border: none;
@@ -254,6 +316,12 @@ legend{
 	background: var(--white-color);
 	color: var(--black-color);
 }
+.result{
+	margin-left: 70px;
+	margin-right: 70px;
+	display: flex;
+	align-items: center;
+}
 .result p:nth-child(1){
 	font-size: 21px;
 	line-height: 26px;
@@ -262,9 +330,15 @@ legend{
 .result p:nth-child(2){
 	font-size: 12px;
 	line-height: 18px;
+	padding-left: 50px;
 }
 .filter_sort li{
 	list-style: none;
+}
+.filter_sort{
+	display: flex;
+	width: 250px;
+	justify-content: space-between;
 }
 .filter_sort a{
 	color: var(--black-color);
@@ -284,24 +358,29 @@ legend{
 	opacity: 1;
 }
 
+/*это все что я придумала, дальше без оберток 
+не знаю как поправить*/
+
 .variant_list li{
 	list-style: none;
 	box-sizing: border-box;
-	width: 1049px;
-	margin: 0 auto;
+	padding: 0;
+	margin: 0;
+	padding-left: 30px;
+	padding-right: 70px;
 	display: grid;
-	grid-template-columns: 1fr 4fr 1fr;
-	grid-gap: 29px;
+	grid-template-columns: 1fr 700px 1fr;
 	margin-top: 40px;
-	padding-bottom: 30px;
 }
-.item_wrapper h2{
+.variant_item img{
+	width: 135px;
+	height: 90px;
+}
+.variant_item h2{
 	margin: 0;
 	padding: 0;
 }
-.item_wrapper p{
-	display: inline-block;
-}
+
 .hotels_name{
 	font-size: 21px;
 	line-height: 26px;
@@ -327,6 +406,7 @@ legend{
 	font-style: normal;
 	font-size: 14px;
 	line-height: 21px;
+	text-align: center;
 	align-items: center;
 	color: var(--white-color);
 	background-color: var(--accent-color);
@@ -368,4 +448,5 @@ legend{
 	background-color: var(--ligth-gray);
 	padding: 3px 15px 3px 12px;
 }
+
 
