@@ -25,15 +25,11 @@
 	box-sizing: border-box;
 }
 
-/*.page-body{
+.page-body{
 	min-height: 100%;
   	display: grid;
-  	grid-template-rows: min-content 1fr min-content;
-  	align-content: start;
-}*/
-/*оставлю закомментированным,
- они сказали потом покажут для чего это нужно было,
- на страницу сейчас никак не влияет*/
+}
+
 a{
 	text-decoration: none;
 }
@@ -64,6 +60,9 @@ body{
   overflow: hidden;
 }
 .container{
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
 	background-color: var(--white-color);
 	width: 1200px;
 	margin: 0 auto;
@@ -137,13 +136,32 @@ body{
 	color: var(--ligth-dark);
 	margin-bottom: 51px;
 }
-/*тут если добавить макс ширину для переноса строк все ломается, 
-это можно исправить?*/
 .reasons_item_child h3,
 .reasons_item_child h4{
 	font-size: 21px;
 	line-height: 21px;
 	max-width: 150px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+.reasons_item_child p{
+
+
+	/*перенос строк*/
+
+
+}
+
+
+/*иконки*/
+.item_icons::before{
+	content: "";
+	position: absolute;
+	width: 74px;
+	height:72px;
+	background-image: url("../img/icon-1.svg");
+	background-repeat: no-repeat;
+	background-position: 0px -40px;
 }
 .child_blue {
 	background-color: var(--accent-color);
@@ -174,7 +192,7 @@ body{
 	grid-template-rows: 1fr;
 }
 /*разные паддинги у содеримого прописывать придется, 
-или можно обойтись br, по тому что ширина тоже разная у каждого параграфа*/
+ по тому что ширина тоже разная у каждого параграфа*/
 .reasons_item_child{
 	display: flex;
 	flex-direction: column;
@@ -192,11 +210,15 @@ body{
 	margin: 0;
 	margin-top: 58px;
 }
+/*укажите предполагаемые даты перенос слов*/
 .hotels_description p:nth-child(3n){
 	font-weight: normal;
 	padding: 0;
 	padding-top: 30px;
-	padding-bottom:10px; 
+	padding-bottom:30px; 
+	width: 430px;
+	line-height: 24px;
+	margin: 0 auto;
 }
 
 .search_hotels{
@@ -246,11 +268,30 @@ body{
 	font-weight: 700;
 	line-height: 26px;
 	border: none;
-	margin-bottom: 30px;
+	padding-top: 10px;
+	padding-bottom: 8px;
 }
+
+/*не получается добавить маргины*/
+/*как выровнять лэйблы*/
 .form_search input{
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.form_search input:nth-child(2){
 	background-color: var(--ligth-gray);
+	background-image: url(../img/calendar.svg);
+	background-repeat: no-repeat;
+	background-position:  310px 10px;
+	/*кажется что она немного с opacity или transparent*/
 	width: 346px;
+	padding-top: 6px;
+	margin-bottom: 6px;
+	padding-left: 12px;
+}
+.form_search input:nth-child(3){
+	width: 114px;
 }
 .form_search input:hover{
 	background-color: var(--ligth-white);
@@ -269,6 +310,8 @@ body{
 	display: inline-block;
 	padding: 16px 182px 16px 181px;
 	margin-top: 14px;
+	border: none;
+	width: 100%;
 }
 .button_search:hover{
 	 background-color: var(--dark-accent);
@@ -283,12 +326,27 @@ body{
 	line-height: 26px;
 	font-weight: 700;
 }
+.footer_info p:nth-child(2){
+	margin-bottom: 9px;
+}
+.footer_info p:nth-child(3){
+	margin-top: 0;
+}
 
-.social_icons .inst{
+
+
+/*иконки*/
+.social_icons a{
+	display: block;
+	position: absolute;
+	background-image: url(../img/twitter.svg);
+	width: 50px
+	height50px;
+	background-color: blue;
 }
 .social_icons .fb{	
 }
-.social_icons .tw{
+.social_icons .yt{
 }
 .social_icons a:hover{
 }
@@ -311,6 +369,7 @@ body{
 }
  
 .footer{
+	width: 100%;
 	display: flex;
 	justify-content: space-around;
 	margin: 0 auto;
@@ -402,7 +461,6 @@ legend{
 }
 .filter_sort{
 	display: flex;
-	/*width: 250px;*/
 	justify-content: space-between;
 }
 .filter_sort a{
