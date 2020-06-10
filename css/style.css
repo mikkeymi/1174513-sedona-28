@@ -14,6 +14,8 @@
   	--ligth-gray: #F2F2F2;
   	--ligth-white: #EBEBEB;
   	--hr-color:#E5E5E5;
+  	--transparent:rgba(255, 255, 255, 0.9);
+  	--color_sort:#C7C7C7;
 }
 .page{
 	height: 100%;
@@ -24,7 +26,11 @@
 *::after{
 	box-sizing: border-box;
 }
-
+hr{
+	width: 100%;
+	color: var(--hr-color);
+	opacity: 0.3;
+}
 .page-body{
 	min-height: 100%;
   	display: grid;
@@ -99,6 +105,7 @@ body{
 	color: var(--accent-color);
 }
 .nav a:active{
+	color: var(--black-color);
 	opacity: 0.3;
 }
 .main_logo{
@@ -144,32 +151,25 @@ body{
 	margin: 0 auto;
 	padding-bottom: 20px;
 }
-.reasons_item_child p{
 
-
-	/*перенос строк*/
-
-
-}
-
-
-/*иконки*/
 .item_icons::before{
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 30px;
 	content: "";
-	position: absolute;
-	width: 74px;
-	height:72px;
+	width: 75px;
+	height:75px;
 	background-image: url("../img/icon-1.svg");
 	background-repeat: no-repeat;
-	background-position: 0px -40px;
+	background-position: 50% 50%;
 }
-.child_blue {
-	background-color: var(--accent-color);
-	color: var(--white-color);
+.burger::before{
+	background-image: url("../img/icon-3.svg");
 }
-.child_gray{
-	background-color: var(--gray-color);
+.gift::before{
+	background-image: url("../img/icon-2.svg");
 }
+
 .reasons_grid{
 	padding: 0;
 }
@@ -191,14 +191,24 @@ body{
 	height: 256px;
 	grid-template-rows: 1fr;
 }
-/*разные паддинги у содеримого прописывать придется, 
- по тому что ширина тоже разная у каждого параграфа*/
+
 .reasons_item_child{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	padding-left: 50px;
 	padding-right: 50px;
+}
+.child_blue {
+	background-color: var(--accent-color);
+	color: var(--white-color);
+	padding-left: 45px;
+	padding-right: 45px;
+}
+.child_gray{
+	background-color: var(--gray-color);
+	padding-left: 60px;
+	padding-right: 60px;
 }
 .hotels_description{
 	text-align: center;
@@ -210,13 +220,12 @@ body{
 	margin: 0;
 	margin-top: 58px;
 }
-/*укажите предполагаемые даты перенос слов*/
 .hotels_description p:nth-child(3n){
 	font-weight: normal;
 	padding: 0;
 	padding-top: 30px;
 	padding-bottom:30px; 
-	width: 430px;
+	width: 568px;
 	line-height: 24px;
 	margin: 0 auto;
 }
@@ -262,6 +271,8 @@ body{
 	margin: 0;
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 30px;
+	position: relative;
 }
 .form_search label,
 .form_search input{
@@ -272,22 +283,16 @@ body{
 	padding-bottom: 8px;
 }
 
-/*не получается добавить маргины*/
-/*как выровнять лэйблы*/
 .form_search input{
 	font-size: 14px;
 	text-transform: uppercase;
 }
-
 .form_search input:nth-child(2){
 	background-color: var(--ligth-gray);
-	background-image: url(../img/calendar.svg);
-	background-repeat: no-repeat;
-	background-position:  310px 10px;
-	/*кажется что она немного с opacity или transparent*/
+	line-height: 26px;
 	width: 346px;
 	padding-top: 6px;
-	margin-bottom: 6px;
+	padding-bottom: 6px;
 	padding-left: 12px;
 }
 .form_search input:nth-child(3){
@@ -299,7 +304,16 @@ body{
 .form_search input:focus{
 	background-color: var(--white-color);
 }
-
+.svg_calendar{
+	position: absolute;
+	right: 10px;
+}
+.label_form:hover .svg_calendar{
+ 	fill: var(--black-color);
+}
+.label_form:active .svg_calendar{
+	fill: var(--accent-color);
+}
 .button_search{
 	color: var(--white-color);
 	background-color: var(--accent-color);
@@ -320,7 +334,10 @@ body{
 	 color: rgba(255,255,255, 0.3);
 	 background-color: var(--darker-accent);
 }
-
+.map{
+	margin-bottom: -120px;
+	
+}
 .footer_info{
 	font-size: 21px;
 	line-height: 26px;
@@ -333,47 +350,78 @@ body{
 	margin-top: 0;
 }
 
-
-
-/*иконки*/
-.social_icons a{
-	display: block;
-	position: absolute;
-	background-image: url(../img/twitter.svg);
-	width: 50px
-	height50px;
-	background-color: blue;
-}
-.social_icons .fb{	
-}
-.social_icons .yt{
-}
-.social_icons a:hover{
-}
-.sochial_icons a:actie{
-}
-
-.signature_logo a{
-	color: var(--black-color);
+.footer{
+	display: grid;
+	grid-template-columns: 1fr 400px 1fr;
 	text-align: center;
-	line-height: 26px;
-	font-weight: 400;
+	padding-left: 73px;
+	padding-right: 73px;
+	position: relative;
+	z-index: 1;
+	background-color: var(--transparent);
+	min-height: 120px;
+}
+.social_icons{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.social_icons a{
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	width: 46px;
+	height:48px;
+	background-color: var(--accent-color);
+	margin-left: 3px;
+	margin-right: 3px;
+}
+.social_icons .tw::before{
+	content: url(../img/twitter.svg);
+	width: 17px;
+	height: 17px;
+}
+.social_icons .fb::before{
+	content: url(../img/facebook.svg);
+	width: 12px;
+	height: 22px;
+}
+.social_icons .yt::before{
+	content: url(../img/youtube.svg);
+	width: 20px;
+	height: 16px;
+}
+.social_icons a:hover{
+	background-color: var(--dark-accent);
+}
+.social_icons a:active{
+	background-color:var(--darker-accent);
+}
+.social_icons a:active::before{
+	opacity: 0.3;
+}
+
+.signature_logo{
+	display: flex;
+	justify-content: center;
+}
+/*лого футер*/
+.signature_logo a{
+	/*color: var(--black-color);*/
+	/*text-align: center;*/
+	/*line-height: 26px;*/
+	/*font-weight: 400;*/
+	/*display: flex;*/
+	align-items: center;
+}
+/*.signature_logo img{*/
+	margin-left: 8px;
 }
 .logo_footer{
 }
 .logo_footer:hover{
 }
 .logo_footer:active{
-}
- 
-.footer{
-	width: 100%;
-	display: flex;
-	justify-content: space-around;
-	margin: 0 auto;
-	align-items: center;
 }
 
 
@@ -397,7 +445,7 @@ body{
 .type{
 	width: 240px;
 }
-.price{
+.block{
 	width: 317px;
 	margin-left: auto;
 }
@@ -410,8 +458,50 @@ legend{
 	line-height: 21px;
 	color: var(--white-color);
 	padding-top: 27px;
-	padding-bottom: 24px;
+	margin-bottom: 24px;
+}
+.checkbox_filters label{
+	position: relative;
+	display: block;
+	cursor: pointer;
+	user-select: none;
+	padding-left: 40px;
+}
+.filter_input_checkbox + label::before{
+	content: "";
+	position: absolute;
+	left: 0px;
+	top: 0;
+	width: 23px;
+	height: 23px;
+	border: 2px solid var(--white-color);
+	border-radius: 2px;
+}
+.filter_input_checkbox:checked+label::after{
+	content: "";
+	position: absolute;
+	top: 1px;
+	left: 4px;
+	width: 21px;
+	height: 16px;
+	background-image: url(../img/check.svg);
+}
 
+
+
+/*сделать инпуты в строчку и выравнивание*/
+.price{
+	display: inline;
+}
+.price input{
+	background-color: transparent;
+	color: var(--white-color);
+	/*display: flex;*/
+	/*flex-wrap: wrap;*/
+	border: 2px solid var(--white-color);
+	text-align: center;
+	text-transform: uppercase;
+	padding:6px 2px 8px 20px;
 }
 .checkbox_filters li{
 	color: var(--white-color);
@@ -423,14 +513,12 @@ legend{
 }
 
 
-/*как спозиционировать кнопку*/
-
+/*выровнять кнопку*/
 .show_results_btn{
 	color: var(--white-color);
 	text-transform: uppercase;
 	line-height: 21px;
 	padding: 7px 35px 8px 36px;
-	margin-top: 33px;
 	background:transparent;
 	border: 2px solid var(--white-color);
 	font-weight: normal;
@@ -474,27 +562,53 @@ legend{
 	color: var(--accent-color);
 	opacity: 1;
 	margin-left: 0;
+	border:none;
 }
 .filter_sort a:hover{
 	color: var(--accent-color);
+	opacity: 1;
 }
 .filter_sort a:active{
 	color: var(--black-color);
 	border: none;
 	opacity: 1;
 }
-
+/* сортировка по убыванию/возрастанию */
+.sort_up_down{
+	display: block;
+	margin-left: auto;
+}
+.sort_up_down a:nth-child(2){
+	padding-left: 10px;
+}
+.svg_sort_up path{
+	fill: var(--color_sort);	
+}
+.svg_sort_down path{
+	fill: var(--accent-color);
+}
+.svg_sort:hover path{
+ 	fill: var(--black-color);
+}
+.svg_sort:active path{
+	fill: var(--accent-color);
+}
+.variant_list{
+	margin: 0;
+	padding: 0;
+}
 .variant_list li{
 	list-style: none;
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	padding-left: 30px;
+	padding-left: 70px;
 	padding-right: 70px;
 	display: grid;
 	grid-template-columns: 135px 1fr 110px;
 	grid-gap: 30px;
-	margin-top: 40px;
+	margin-top: 30px;
+	padding-bottom: 30px;
 }
 .variant_item img{
 	width: 135px;
@@ -510,6 +624,7 @@ legend{
 	margin-bottom: 15px;
 }
 .hotels_name{
+	color: var(--black-color);
 	font-size: 21px;
 	line-height: 26px;
 	align-items: center;
@@ -523,6 +638,7 @@ legend{
 }
 .hotels_type,
 .variant_price{
+	color: var(--black-color);
 	font-size: 14px;
 	font-weight: normal;
 	align-items: center;
@@ -531,7 +647,6 @@ legend{
 	display: inline-block;
 	min-width: 116px;
 }
- 
 
 .detailed_btn{
 	display: inline-block;
@@ -584,6 +699,84 @@ legend{
 	color: var(--brown2);
 	padding: 3px 15px 3px 12px;
 	background-color: var(--gray-color);
+	margin-top: 40px;
 }
 
+/*звезды как по 1 вставить, по тому что между ними паддинги*/
 
+.rating .stars{
+	background-image: url(../img/star.svg);
+	width: 70px;
+	height: 17px;
+	margin: 0 auto
+}
+
+/*ползунок*/
+
+.range-filter {
+  width: 260px;
+  margin-top: 20px;
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  width: 316px;
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 60%;
+  height: 2px;
+  background: var(--white-color);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: -6px;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 0px;
+}
+
+.range-controls .toggle-max {
+  left: 259px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-controls label {
+  text-transform: uppercase;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  color: #283136;
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+  font-family: inherit;
+  font-size: inherit;
+}
