@@ -76,6 +76,7 @@ body{
 	background-color: var(--white-color);
 	width: 1200px;
 	margin: 0 auto;
+	box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 .nav ul{
 	padding-left: 0;
@@ -118,10 +119,10 @@ body{
 	margin-left: -60px;
 }
 .title{
-	background-image: url(../img/main_background.jpeg);
-	background-position: center;
+	background-image:  url(../img/intro-mask.svg), url(../img/main_background.jpeg);
+	background-position: 50% 100%, center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain, cover;
 	display: flex;
 }
 .title img{
@@ -131,6 +132,7 @@ body{
 }
 .reasons{
 	text-align: center;
+
 }
 .reasons_title{
 	font-weight: 700;
@@ -278,18 +280,23 @@ body{
 	margin-bottom: 30px;
 	position: relative;
 }
+.form_body .form_quantity{
+	width: 50%;
+}
+.form_body .form_quantity + .form_quantity{
+	padding-left: 50px;
+}
 .form_search label,
 .form_search input{
 	font-weight: 700;
 	line-height: 26px;
 	border: none;
 	padding-top: 10px;
-	padding-bottom: 8px;
 }
-
 .form_search input{
 	font-size: 14px;
 	text-transform: uppercase;
+	background-color: var(--ligth-gray);
 }
 .form_search input:nth-child(2){
 	background-color: var(--ligth-gray);
@@ -299,9 +306,21 @@ body{
 	padding-bottom: 6px;
 	padding-left: 12px;
 }
-.form_search input:nth-child(3){
+
+
+/*форма*/
+.form_search input[type="number"]{
 	width: 114px;
+	padding-left: 48px;
+	padding-right: 48px;
+	-moz-appearance: textfield;
+	text-align: center;
 }
+.form_search input[type="number"]::-webkit-inner-spin-button,
+.form_search input[type="number"]::-webkit-outer-spin-button{
+	-webkit-appearance: none;
+}
+
 .form_search input:hover{
 	background-color: var(--ligth-white);
 }
@@ -340,7 +359,6 @@ body{
 }
 .map{
 	margin-bottom: -120px;
-	
 }
 .footer_info{
 	font-size: 21px;
@@ -443,6 +461,8 @@ body{
 	display: flex;
 	padding-left: 72px;
 	padding-right: 72px;
+	padding-top: 27px;
+	padding-bottom: 32px;
 }
 .filters ul{
 	margin: 0;
@@ -453,6 +473,8 @@ body{
 	width: 240px;
 }
 .block{
+	display: flex;
+	flex-direction: column;
 	width: 317px;
 	margin-left: auto;
 }
@@ -464,7 +486,6 @@ legend{
 	font-size: 16px;
 	line-height: 21px;
 	color: var(--white-color);
-	padding-top: 27px;
 	margin-bottom: 24px;
 }
 .checkbox_filters label{
@@ -494,17 +515,9 @@ legend{
 	background-image: url(../img/check.svg);
 }
 
-
-
-/*сделать инпуты в строчку и выравнивание*/
-.price{
-	display: inline;
-}
 .price input{
 	background-color: transparent;
 	color: var(--white-color);
-	/*display: flex;*/
-	/*flex-wrap: wrap;*/
 	border: 2px solid var(--white-color);
 	text-align: center;
 	text-transform: uppercase;
@@ -519,8 +532,6 @@ legend{
 	padding-bottom: 25px;
 }
 
-
-/*выровнять кнопку*/
 .show_results_btn{
 	color: var(--white-color);
 	text-transform: uppercase;
@@ -530,6 +541,7 @@ legend{
 	border: 2px solid var(--white-color);
 	font-weight: normal;
 	border-radius: 2px;
+	align-self: center;
 }
 .show_results_btn:hover{
 	background: var(--white-color);
@@ -709,13 +721,20 @@ legend{
 	margin-top: 40px;
 }
 
-/*звезды как по 1 вставить, по тому что между ними паддинги*/
-
 .rating .stars{
 	background-image: url(../img/star.svg);
-	width: 70px;
+	background-size: 24px 17px;
+	background-repeat:repeat-x;
+	width: 93px;
 	height: 17px;
-	margin: 0 auto
+	margin-left: auto;
+
+}
+.rating .stars-3{
+	width: 68px;
+}
+.rating .stars-2{
+	width: 45px;
 }
 
 /*ползунок*/
@@ -746,13 +765,13 @@ legend{
 .range-controls .toggle {
   position: absolute;
   top: -6px;
-  width: 4px;
-  height: 4px;
+  width: 20px;
+  height: 20px;
   padding: 0;
   border: 8px solid #ffffff;
   background-color: #ababab;
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
+  box-shadow: 0 1px 1px 0 #cfcfcf;
   cursor: pointer;
 }
 
@@ -788,9 +807,24 @@ legend{
   font-size: inherit;
 }
 
+.counter_container{
+	position: relative;
+}
 .symbols{
 	background-color: transparent;
 	border: none;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	width: 36px;
+
+}
+.minus{
+
+	left: 0;
+}
+.plus{
+	right: 0;
 }
 .minus::before{
 	content: "";
@@ -805,7 +839,6 @@ legend{
 .minus:active::before{
 	background-color: var(--accent-color);
 }
-
 .plus::before{
 	content: "";
 	position: absolute;
