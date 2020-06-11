@@ -14,8 +14,12 @@
   	--ligth-gray: #F2F2F2;
   	--ligth-white: #EBEBEB;
   	--hr-color:#E5E5E5;
-  	--transparent:rgba(255, 255, 255, 0.9);
   	--color_sort:#C7C7C7;
+  	--active_logo:#BDBBBC;
+  	--plus_minus:#A9A9A9;
+
+  	--transparent:rgba(255, 255, 255, 0.9);
+  
 }
 .page{
 	height: 100%;
@@ -407,21 +411,24 @@ body{
 }
 /*лого футер*/
 .signature_logo a{
-	/*color: var(--black-color);*/
-	/*text-align: center;*/
-	/*line-height: 26px;*/
-	/*font-weight: 400;*/
-	/*display: flex;*/
+	color: var(--black-color);
+	text-align: center;
+	line-height: 26px;
+	font-weight: 400;
+	display: flex;
 	align-items: center;
 }
-/*.signature_logo img{*/
+.signature_logo svg{
+	width: 115px;
+	height: 41px;
 	margin-left: 8px;
 }
-.logo_footer{
+
+.signature_logo a:hover svg path{
+	fill: var(--accent-color);
 }
-.logo_footer:hover{
-}
-.logo_footer:active{
+.signature_logo a:active svg path{
+	fill: #BDBBBC;
 }
 
 
@@ -779,4 +786,47 @@ legend{
   background: #f1f1f1;
   font-family: inherit;
   font-size: inherit;
+}
+
+.symbols{
+	background-color: transparent;
+	border: none;
+}
+.minus::before{
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 2px;
+	background-color: var(--plus_minus);
+}
+.minus:hover::before{
+	background-color: var(--black-color);
+}
+.minus:active::before{
+	background-color: var(--accent-color);
+}
+
+.plus::before{
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 2px;
+	background-color: var(--plus_minus);
+}
+.plus::after{
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 2px;
+	transform: rotate(90deg);
+	background-color: var(--plus_minus);
+}
+.plus:hover::before,
+.plus:hover::after{
+ background-color: var(--black-color);
+}
+
+.plus:active::before,
+.plus:active::after{
+	background-color: var(--accent-color);
 }
