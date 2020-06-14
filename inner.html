@@ -72,11 +72,11 @@
 <div class="block">
 		<fieldset class="price">
 			<legend>стоимость в сутки (P):</legend>
-				<input  aria-hidden="true" id="range_min" type="text" name="range_min" value="от 0">
-					<label  for="range_min">цена от 0</label>
-				<input aria-hidden="true" id="range_max" type="text" name="range_max" value="до 3000">
-					<label for="range_max">цена до 3000</label>
-	
+			<div class="range">
+				<input  area-label="цена от" type="text" name="range_min" value="от 0">
+					
+				<input area-label="цена до" type="text" name="range_max" value="до 3000">		
+			</div>
      
         <div class="range-filter">
           <div class="range-controls">
@@ -92,19 +92,13 @@
         </div>
 		</fieldset>
 		<button class="show_results_btn" type="sumbit">Показать</button>
-	</div>
+</div>
 	
     </form>
 
 
 
-			 <!-- тут пытается появиться искусственный ползунок -->
-			<!--  <div class="slider">
-			 	<button aria-hidden="true" type="button">
-			 	</button>
-			 	<button aria-hidden="true" type="button">
-			 	</button>
-			 </div> -->
+			
 
 
 	<section class="result">

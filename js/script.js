@@ -1,0 +1,1 @@
+let closeForm = document.querySelector(".class")
