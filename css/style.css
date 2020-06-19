@@ -20,6 +20,7 @@
   	--logo_color_active:#BDBBBC;
     --logo_color:#231F20;
     --transparnt-color: #8B8080;
+    --main_title_safety:#A1C5DC;
 
   	--transparent:rgba(255, 255, 255, 0.9);
   
@@ -134,6 +135,7 @@ body{
 	margin-left: -68px;
 }
 .title{
+	background-color: var(--main_title_safety);
 	background-image:  url(../img/intro-mask.svg), url(../img/main_background.jpg);
 	background-position: 0 100%, 0 0;
 	background-repeat: no-repeat;
@@ -376,9 +378,10 @@ body{
 .form_search input:focus{
 	background-color: var(--white-color);
 }
-.svg_calendar{
+.svg_calendar_bottom{
 	position: absolute;
 	right: 10px;
+	border: none;
 }
 .label_form:hover .svg_calendar{
  	fill: var(--black-color);
@@ -415,6 +418,9 @@ body{
 	line-height: 26px;
 	font-weight: 700;
 	margin-top: 3px;
+}
+.footer_info a{
+	color: inherit;
 }
 .footer_info p:nth-child(2){
 	margin-bottom: 9px;
