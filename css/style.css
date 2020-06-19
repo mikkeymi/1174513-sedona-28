@@ -37,6 +37,8 @@ hr{
 	width: 100%;
 	color: var(--hr-color);
 	opacity: 0.3;
+	margin: 0;
+	padding:0;
 }
 .page-body{
 	min-height: 100%;
@@ -646,11 +648,13 @@ legend{
 	color: var(--black-color);
 }
 .result{
-	margin-top: 5px;
-	margin-left: 74px;
-	margin-right: 70px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	padding-left: 74px;
+	padding-right: 70px;
 	display: flex;
 	align-items: center;
+	border-bottom:1px solid var(--hr-color);
 }
 .result p:nth-child(1){
 	font-size: 21px;
@@ -716,6 +720,7 @@ legend{
 	margin: 0;
 	padding: 0;
 }
+
 .variant_list li{
 	list-style: none;
 	box-sizing: border-box;
@@ -726,7 +731,9 @@ legend{
 	display: grid;
 	grid-template-columns: 135px 1fr 110px;
 	grid-gap: 30px;
-	margin-top: 25px;
+	padding-top: 24px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid var(--hr-color);
 }
 .variant_item img{
 	width: 135px;
@@ -779,8 +786,7 @@ legend{
 	align-items: center;
 	color: var(--white-color);
 	background-color: var(--accent-color);
-	width: 110px
-	padding-right: 6px;
+	width: 110px;
 }
 .detailed_btn:hover{
  	background-color: var(--dark-accent);
@@ -819,7 +825,7 @@ legend{
 	color: var(--brown2);
 	padding: 3px 15px 3px 12px;
 	background-color: var(--ligth-gray);
-	margin-top: 25px;
+	margin-top: 30px;
 }
 .rating .stars{
 	background-image: url(../img/star.svg);
