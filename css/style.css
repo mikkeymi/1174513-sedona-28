@@ -134,7 +134,7 @@ body{
 	margin-left: -68px;
 }
 .title{
-	background-image:  url(../img/intro-mask.svg), url(../img/main_background.jpeg);
+	background-image:  url(../img/intro-mask.svg), url(../img/main_background.jpg);
 	background-position: 0 100%, 0 0;
 	background-repeat: no-repeat;
 	background-size: 1200px 57px, auto;
@@ -394,6 +394,7 @@ body{
 	text-transform: uppercase;
 	font-weight: 700;
 	display: inline-block;
+	vertical-align: middle;
 	padding: 16px 182px 16px 181px;
 	margin-top: 25px;
 	border: none;
@@ -771,12 +772,14 @@ legend{
 }
 .hotels_type span{
 	display: inline-block;
+	vertical-align: middle;
 	min-width: 116px;
 	margin-top: 5px;
 }
 
 .detailed_btn{
 	display: inline-block;
+	vertical-align: middle;
 	font-weight: 400;
 	padding: 3px 16px 3px 17px;
 	font-style: normal;
@@ -797,6 +800,7 @@ legend{
 }
 .book_btn{
 	display: inline-block;
+	vertical-align: middle;
 	text-transform: uppercase;
 	font-family: inherit;
 	border: none;
@@ -822,6 +826,7 @@ legend{
 	font-weight: normal;
 	text-align: center;
 	display: inline-block;
+	vertical-align: middle;
 	color: var(--brown2);
 	padding: 3px 15px 3px 12px;
 	background-color: var(--ligth-gray);
