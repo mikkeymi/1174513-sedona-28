@@ -362,7 +362,7 @@ body {
 }
 .svg_calendar_bottom {
 	position: absolute;
-	right: 10px;
+	right: 5px;
 	border: none;
 }
 .label_form:hover .svg_calendar {
@@ -563,6 +563,9 @@ body {
 }
 .filter_input_checkbox:disabled+label::after {
 	opacity: 0.3;
+}
+.filter_input_checkbox:focus+label::before {
+	border: 2px solid var(--accent-color);
 }
 .price legend {
 	margin: 0;
