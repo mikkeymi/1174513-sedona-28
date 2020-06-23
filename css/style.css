@@ -526,7 +526,7 @@ body {
 	font-size: 16px;
 	line-height: 21px;
 	color: var(--white-color);
-	margin-bottom: 24px;
+	margin-bottom: 20px;
 }
 .checkbox_filters label {
 	position: relative;
@@ -690,6 +690,7 @@ body {
 .sort_up_down {
 	display: block;
 	margin-left: auto;
+	margin-top: 7px;
 }
 .sort_up_down a:nth-child(2) {
 	padding-left: 10px;
@@ -816,7 +817,6 @@ body {
 	color: var(--brown2);
 	padding: 3px 15px 3px 12px;
 	background-color: var(--ligth-gray);
-	margin-top: 30px;
 }
 .rating .stars {
 	background-image: url(../img/star.svg);
@@ -826,7 +826,7 @@ body {
 	height: 17px;
 	margin: 0;
 	margin-left: auto;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 .rating .stars_3 {
 	width: 68px;
