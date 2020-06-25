@@ -22,9 +22,11 @@
 	--transparnt-color: #8B8080;
 	--main_title_safety: #A1C5DC;
 	--transparent: rgba(255, 255, 255, 0.9);
+	--full_transparenr:rgba(255, 255, 255, 0.3);
 	--border_color: #ABABAB;
 	--box-shadow-color: #CFCFCF;
 	--dark_transparent: rgba(0, 0, 0, 0.3);
+	--mid_transparent:rgba(0, 1, 1, 0.2);
 	--price_color: #283136;
 }
 .page {
@@ -33,7 +35,7 @@
 *, *::before, *::after {
 	box-sizing: border-box;
 }
-.page-body {
+.page_body {
 	min-height: 100%;
 	display: grid;
 }
@@ -54,7 +56,7 @@ body {
 	text-transform: uppercase;
 	color: var(--black-color);
 }
-.visually-hidden {
+.visually_hidden {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -71,7 +73,7 @@ body {
 	background-color: var(--white-color);
 	width: 1200px;
 	margin: 0 auto;
-	box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+	box-shadow: 0px 5px 15px var(--mid_transparent);
 }
 .nav {
 	background-color: var(--white-color);
@@ -82,7 +84,6 @@ body {
 	justify-content: space-around;
 	flex-wrap: wrap;
 	margin: 0;
-	height: 56px;
 	padding-left: 72px;
 	padding-right: 72px;
 }
@@ -96,7 +97,7 @@ body {
 .nav_item a {
 	display: block;
 	margin-top: 17px;
-	margin-bottom: 20px;
+	margin-bottom: 18px;
 }
 .nav_item li:nth-child(2) {
 	margin-right: 72px;
@@ -395,7 +396,7 @@ body {
 	background-color: var(--dark-accent);
 }
 .button_search:active {
-	color: rgba(255, 255, 255, 0.3);
+	color: 	var(full_transparenr);
 	background-color: var(--darker-accent);
 }
 .map {
@@ -881,9 +882,7 @@ body {
 	z-index: 10;
 }
 .range_controls .toggle:hover {
-	width: 25px;
-	height: 25px;
-	border: 10px solid var(--white-color);
+	transform: scale(1.25);
 }
 .range_controls .toggle_min {
 	left: 0px;
