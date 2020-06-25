@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>HTML Academy: Седона</title>
 	<link href="normalize.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
+	<link href="css/style.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
@@ -50,7 +50,8 @@
 					<fieldset class="price fieldset">
 						<legend class="legend">стоимость в сутки (P):</legend>
 						<div class="range">
-							<input id="range_mins" name="range_min" type="text" value="от 0"> <label class="visually-hidden" for="range_mins"></label> <input id="range_max" name="range_max" type="text" value="до 3000"> <label class="visually-hidden" for="range_max"></label>
+							<input id="range_mins" aria-label="цена от" name="range_min" type="text" value="от 0"> 
+							<input id="range_max" aria-label="цена до" name="range_max" type="text" value="до 3000">
 						</div>
 						<div class="range_filter">
 							<div class="range_controls">
@@ -79,11 +80,20 @@
 					</li>
 				</ul>
 				<div class="sort_up_down">
-					<a href="#"><svg class="svg_sort_up svg_sort" height="10" viewbox="0 0 11 10" width="11" xmlns="http://www.w3.org/2000/svg">
-					<path d="M5.5 0L0 10h11z" fill="#231F20"></path></svg></a> 
+					<a href="#">
+						<svg class="svg_sort_up svg_sort" height="10" viewbox="0 0 11 10" width="11" xmlns="http://www.w3.org/2000/svg">
+						<path d="M5.5 0L0 10h11z" fill="#231F20"></path>
+						</svg>
+						<span class="visually-hidden">Сортировать по возрастанию</span>
+					</a> 
 
-					<a href="#"><svg class="svg_sort_down svg_sort" height="10" viewbox="0 0 11 10" width="11" xmlns="http://www.w3.org/2000/svg">
-					<path d="M5.5 10L0 0h11" fill="#231F20"></path></svg></a>
+					<a href="#">
+						<svg class="svg_sort_down svg_sort" height="10" viewbox="0 0 11 10" width="11" xmlns="http://www.w3.org/2000/svg">
+						<path d="M5.5 10L0 0h11" fill="#231F20">
+						</path>
+						</svg>
+						<span class="visually-hidden">Сортировать по убыванию</span>
+					</a>
 				</div>
 			</section>
 			<section class="hotels_variant">
@@ -93,7 +103,8 @@
 						<img alt="Фото гостинцы" height="90" src="img/hotels_1.jpg" width="135">
 						<div class="hotel_info">
 							<h2 class="hotels_name">Amara resort & spa</h2>
-							<p class="hotels_type"><span>Гостиница</span> от 4000 p.</p><a class="detailed_btn" href="#">Подробнее</a> <button class="book_btn" type="button">Забронировать</button>
+							<p class="hotels_type"><span>Гостиница</span> от 4000 p.</p>
+							<a class="detailed_btn" href="#">Подробнее</a> <button class="book_btn" type="button">Забронировать</button>
 						</div>
 						<div class="rating">
 							<p class="stars"></p>

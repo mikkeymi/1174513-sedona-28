@@ -334,14 +334,15 @@ body {
 	font-size: 14px;
 	text-transform: uppercase;
 	background-color: var(--ligth-gray);
+	border: 2px solid var(--ligth-gray);
 }
 .form_search input:nth-child(2) {
 	background-color: var(--ligth-gray);
 	line-height: 26px;
 	width: 346px;
-	padding-top: 6px;
-	padding-bottom: 6px;
-	padding-left: 12px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 10px;
 }
 .form_search input[type="number"] {
 	width: 114px;
@@ -356,14 +357,19 @@ body {
 }
 .form_search input:hover {
 	background-color: var(--ligth-white);
+	border-color: var(--ligth-gray);
 }
 .form_search input:focus {
 	background-color: var(--white-color);
+	border: 2px solid var(--gray-color);
+	outline: none;
 }
-.svg_calendar_bottom {
+.svg_calendar_button {
 	position: absolute;
-	right: 5px;
+	top: 7px;
+	right: 3px;
 	border: none;
+	background: none;
 }
 .label_form:hover .svg_calendar {
 	fill: var(--black-color);
@@ -498,7 +504,7 @@ body {
 	background-size: cover;
 	display: flex;
 	padding-left: 60px;
-	padding-right: 70px;
+	padding-right: 73px;
 	padding-top: 25px;
 }
 .filters ul {
@@ -520,6 +526,10 @@ body {
 }
 .fieldset {
 	border: none;
+}
+.price{
+	margin:0;
+	padding: 0;
 }
 .legend {
 	font-weight: 400;
@@ -570,15 +580,13 @@ body {
 .price legend {
 	margin: 0;
 	padding: 0;
-	margin-left: -15px;
-	padding-bottom: 8px;
+	padding-bottom: 13px;
 }
 .price value {
 	font-weight: 400;
 }
 .range {
 	display: flex;
-	margin-left: -15px;
 }
 .range::before {
 	content: "";
@@ -597,7 +605,8 @@ body {
 	text-align: center;
 	text-transform: uppercase;
 	padding: 5px 8px 5px 8px;
-	width: 155px;
+	width: 0;
+	flex-grow: 1;
 	font-size: 14px;
 	line-height: 21px;
 }
@@ -633,7 +642,7 @@ body {
 	font-weight: normal;
 	border-radius: 2px;
 	align-self: center;
-	margin-top: 22px;
+	margin-top: 30px;
 }
 .show_results_btn:hover {
 	background: var(--white-color);
@@ -641,7 +650,7 @@ body {
 }
 .result {
 	padding-top: 5px;
-	padding-bottom: 10px;
+	padding-bottom: 8px;
 	padding-left: 74px;
 	padding-right: 70px;
 	display: flex;
@@ -652,6 +661,7 @@ body {
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
+	margin-top: 25px;
 }
 .result p:nth-child(2) {
 	font-size: 12px;
@@ -722,7 +732,7 @@ body {
 	grid-template-columns: 135px 1fr 110px;
 	grid-gap: 30px;
 	padding-top: 24px;
-	padding-bottom: 8px;
+	padding-bottom: 11px;
 	border-bottom: 1px solid var(--hr-color);
 }
 .variant_item img {
@@ -737,7 +747,8 @@ body {
 }
 .hotel_info p {
 	margin: 0;
-	margin-bottom: 15px;
+	margin-bottom: 17px;
+	margin-top: 5px;
 }
 .hotels_name {
 	color: var(--black-color);
@@ -758,11 +769,12 @@ body {
 	font-weight: normal;
 	align-items: center;
 }
+.hotels_type{
+	display: flex;
+	align-items: baseline;
+}
 .hotels_type span {
-	display: inline-block;
-	vertical-align: middle;
 	min-width: 116px;
-	margin-top: 5px;
 }
 .detailed_btn {
 	display: inline-block;
@@ -799,6 +811,7 @@ body {
 	align-items: center;
 	color: var(--white-color);
 	background-color: var(--basic-brown);
+	margin-left: 2px;
 	width: 142px;
 }
 .book_btn:hover {
@@ -826,7 +839,8 @@ body {
 	height: 17px;
 	margin: 0;
 	margin-left: auto;
-	margin-bottom: 40px;
+	margin-top: 5px;
+	margin-bottom: 34px;
 }
 .rating .stars_3 {
 	width: 68px;
@@ -837,7 +851,6 @@ body {
 .range_filter {
 	width: 260px;
 	margin-top: 20px;
-	margin-left: -15px;
 }
 .range_controls {
 	position: relative;
@@ -856,15 +869,16 @@ body {
 }
 .range_controls .toggle {
 	position: absolute;
-	top: -6px;
+	top: -10px;
 	width: 20px;
 	height: 20px;
 	padding: 0;
 	border: 8px solid var(--white-color);
-	background-color: var(--border-color);
+	background-color: var(--border_color);
 	border-radius: 50%;
 	box-shadow: 0 1px 1px 0 var(--box-shadow-color);
 	cursor: pointer;
+	z-index: 10;
 }
 .range_controls .toggle:hover {
 	width: 25px;
@@ -934,8 +948,11 @@ body {
 .plus:active::before, .plus:active::after {
 	background-color: var(--accent-color);
 }
-.modal-hide {
+.modal_hide {
 	display: none;
+}
+.form_error{
+	animation: shake 0.6s;
 }
 @keyframes bounce {
 	0% {
@@ -950,4 +967,25 @@ body {
 	100% {
 		transform: translateY(0);
 	}
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
